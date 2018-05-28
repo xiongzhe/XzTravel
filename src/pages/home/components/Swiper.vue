@@ -31,7 +31,7 @@
 </script>
 
 <style lang="stylus" scoped>
-  .wrapper >>> .swiper-pagination-bullet-active
+  .wrapper >>> .swiper-pagination-bullet-active //>>> 样式穿透，不受scoped的限制
     background #fff
 
   .wrapper
