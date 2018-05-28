@@ -2,7 +2,7 @@
   <div>
     <div class="title">热销推荐</div>
     <ul>
-      <li class="item" v-for="item of recommendList" :key="item.id">
+      <li class="item" v-for="item of list" :key="item.id">
         <img class="item-img"
              :src="item.imgUrl">
         <div class="item-info">
@@ -19,30 +19,8 @@
 <script>
   export default {
     name: 'HomeRecommend',
-    data () {
-      return {
-        recommendList: [{
-          id: '0001',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1505/55/55978d709ae63850.water.jpg_200x200_5120b9d6.jpg',
-          title: '世界之窗',
-          desc: '各个国家建筑设计，游走于世界之中'
-        }, {
-          id: '0002',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1505/55/55978d709ae63850.water.jpg_200x200_5120b9d6.jpg',
-          title: '世界之窗',
-          desc: '各个国家建筑设计，游走于世界之中'
-        }, {
-          id: '0003',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1505/55/55978d709ae63850.water.jpg_200x200_5120b9d6.jpg',
-          title: '世界之窗',
-          desc: '各个国家建筑设计，游走于世界之中'
-        }, {
-          id: '0004',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1505/55/55978d709ae63850.water.jpg_200x200_5120b9d6.jpg',
-          title: '世界之窗',
-          desc: '各个国家建筑设计，游走于世界之中'
-        }]
-      }
+    props: {
+      list: Array
     }
   }
 </script>
