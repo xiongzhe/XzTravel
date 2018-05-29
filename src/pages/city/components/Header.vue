@@ -9,10 +9,7 @@
 
 <script>
   export default {
-    name: 'CityHeader',
-    props: {
-      city: String
-    }
+    name: 'CityHeader'
   }
 </script>
 
