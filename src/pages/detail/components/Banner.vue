@@ -19,7 +19,7 @@
   import CommonGallary from 'common/gallary/Gallary'
 
   export default {
-    name: 'Detail',
+    name: 'DetailBanner',
     data () {
       return {
         showGallary: false,
@@ -74,6 +74,4 @@
         font-size .24rem
         .banner-icon
           font-size .24rem
-
-
 </style>
