@@ -1,17 +1,16 @@
 <template>
   <div>
     <div class="banner" @click="handleBannerClick">
-      <img src="http://img1.qunarzz.com/sight/p0/1607/7c/7cda8b6782dabd80b4.img.jpg_600x330_8572a930.jpg"
-           class="banner-img">
+      <img :src="bannerImg" class="banner-img">
       <div class="banner-info">
-        <div class="banner-title">上海迪士尼乐园</div>
+        <div class="banner-title">{{this.sightName}}</div>
         <div class="banner-number">
           <span class="iconfont banner-icon">&#xe600;</span>
-          15
+          {{this.bannerImgs.length}}
         </div>
       </div>
     </div>
-    <common-gallary :imgs="imgs" v-show="showGallary" @close="handleGallaryClose"></common-gallary>
+    <common-gallary :imgs="bannerImgs" v-show="showGallary" @close="handleGallaryClose"></common-gallary>
   </div>
 </template>
 
@@ -20,20 +19,21 @@
 
   export default {
     name: 'DetailBanner',
+    props: {
+      sightName: String,
+      bannerImg: String,
+      bannerImgs: Array
+    },
     data () {
       return {
-        showGallary: false,
-        imgs: [
-          'http://img1.qunarzz.com/sight/p0/1607/7c/7cda8b6782dabd80b4.img.jpg_600x330_8572a930.jpg',
-          'http://img1.qunarzz.com/sight/p0/1506/30/7a528fae12c17e6e29d5d13a9d9813ee.water.jpg_600x330_866232e3.jpg'
-        ]
+        showGallary: false
       }
     },
     methods: {
       handleBannerClick () {
         this.showGallary = true
       },
-      handleGallaryClose() {
+      handleGallaryClose () {
         this.showGallary = false
       }
     },
